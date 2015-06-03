@@ -3,11 +3,11 @@ class PageController < ApplicationController
     @booking = Booking.new
   end
 
-
-# booking.create, add details from booker / user
-
-  def booking
-  Booking.create(phone_number)
+  def
+   @booking = Booking.create
 
   end
+
+@booking.save
+  # end
 end
