@@ -1,3 +1,22 @@
+bn = Booking.new
+bn.to_model == bn  # => true
+bn.to_key          # => nil
+bn.to_param        # => nil
+bn.to_partial_path # => "contact_messages/contact_message"
+
+
+-----
+
+<!--
+<%= form_for @booking do |f| %>
+Number of Visitors: <%= f.integer_field :number_of_visitors %><br />
+Name: <%= f.text_field :booker %><br />
+Cell Phone: <%= f.text_field :phone_number %><br />
+<%= f.submit %>
+<% end %> -->
+
+
+-------
 
 
 <!DOCTYPE html>
