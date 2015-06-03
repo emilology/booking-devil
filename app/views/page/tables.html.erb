@@ -12,16 +12,15 @@
     <%= f.text :number_of_visitors %><br>
     <%= f.text :text %>
   </p>
-
   <p>
     <%= f.submit %>
   </p>
 <% end %>
 
 
-  <!-- <%= form_for @booking do |f| %>
-  Number of Visitors: <%= f.integer_field :number_of_visitors %><br />
-  Name: <%= f.text_field :booker %><br />
-  Cell Phone: <%= f.text_field :phone_number %><br />
-  <%= f.submit %>
-  <% end %> -->
+<%= form_for @booking do |f| %>
+Number of Visitors: <%= f.integer_field :number_of_visitors %><br />
+Name: <%= f.text_field :booker %><br />
+Cell Phone: <%= f.text_field :phone_number %><br />
+<%= f.submit %>
+<% end %>
