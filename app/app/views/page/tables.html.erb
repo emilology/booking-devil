@@ -4,81 +4,14 @@
 
 <h2>Information About Hillside</h2>
 
-  <p>Welcome! How many people would you like to reserve a table for?</p>
-  <div class="numvis">
-  <form_for :number1 do |number| Number Attending: f.number :number1
-  numvis=gets.to_i
-  <f.submit>
-  </div>
-  <end>
+<p>Great! How many people would you like to reserve a table for?</p>
 
-<p>This is the info page where people book from</p>
+<%= form_for :booking do |f| %>
 
-<div id="DIV_1">
-	<div id="DIV_2">
-		<!-- Booking - Number of visitors -->
-
-		<div id="DIV_3">
-			<div id="DIV_4">
-				Number of visitors - ask
-			</div>
-			<div id="DIV_5">
-				What is your full name?
-        <form action="demo_form.asp">
-        First name: <input type="text" name="fname"><br>
-        Last name: <input type="text" name="lname"><br>
-        <input type="submit" value="Submit">
-        </form>
-			</div>
-		</div>
-		<!-- Try one-->
-    <div id="DIV_5">
-      How many people would you like to bring with you?
-    </div>
-        <select name="hour">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        ...
-        ...
-        <option value="24">24</option>
-        </select>
-		<!--  - NAVIGATION -->
-
-		<div id="DIV_6">
-			<div id="DIV_7">
-				<ul id="UL_8">
-					<li id="LI_9">
-						 <a href="#" id="A_10">1</a>
-					</li>
-            <div href="#" id="A_10">here</div>
-          </div>
-					<li id="LI_11">
-						<a href="#" id="A_12">2</a>
-					</li>
-					<li id="LI_13">
-						<a href="#" id="A_14">3</a>
-					</li>
-					<li id="LI_15">
-						<a href="#" id="A_16">4</a>
-					</li>
-					<li id="LI_17">
-						<a href="#" id="A_18">5</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- Nights - Which night would you like to come? -->
-    <a href="#name">click me</a>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br>
-            <div name="name" id="name">here</div>
-
-
-		<!-- Tables free -->
-
-		<div id="DIV_20">
-		    <img src="rect4.png" alt="four person table" />
-		</div>
+  <p>
+    <%= f.text_field :number_of_visitors %><br>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

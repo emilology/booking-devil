@@ -16,6 +16,11 @@ Cell Phone: <%= f.text_field :phone_number %><br />
 <% end %> -->
 
 
+---------
+
+# get 'booking', :to => redirect('/bookings#new')
+
+
 -------
 
 
