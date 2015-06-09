@@ -14,30 +14,3 @@
  *= require_tree .
  *= require_self
  */
-
- $font-stack:    Helvetica, sans-serif;
- $primary-color: #333;
-
-
- h1   {
-   font: 100% Helvetica, sans-serif;
-   colour: #333;
- }
-
- body {
-   font: 100% $font-stack;
-   color: $primary-color;
- }
-
-
- body { padding-top: 60px; }
-
-
-  .article {
-    float: left;
-    margin: 5px;
-    padding: 5px;
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-  }

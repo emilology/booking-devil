@@ -1,0 +1,50 @@
+$font-stack:    Georgia, sans-serif;
+$primary-color: #333;
+
+// .background-image {
+//   background-image: url("/images/bkg.jpg");
+// }
+
+ h1   {
+  font-family: "Raleway";
+  font-style: normal;
+  font-size: 18px;
+   color: #CAF1EE;
+ }
+
+
+.opaque1 {
+  background:
+    /*top, transparent red, faked with gradient*/
+    linear-gradient(
+      rgba(242, 240, 188, 0.40),
+      rgba(242, 240, 188, 0.40)
+    ),
+    /* bottom, image */
+    url(bkg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 100%;
+    background-attachment: fixed;
+}
+
+
+ // {
+ //   background-image: url(bkg.jpg);
+ //   font: 100% $font-stack;
+ //   color: $primary-color;
+ // }
+
+ body {
+   padding-top: 60px;
+   margin: 20px auto;
+ }
+
+.article {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+  }
