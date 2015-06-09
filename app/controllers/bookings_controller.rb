@@ -1,36 +1,26 @@
-class PageController < ApplicationController
+class BookingsController < ApplicationController
   def booking
     @booking = Booking.new
   end
 
-  def booking.create
-    if @booking = Booking.create(params[:booking])
+  def list
+  @bookings = Booking.order("id ASC")
+  end
+
+  def show
+  @booking = Booking.find(params[:id])
+  end
+
+  def booking_params
+    params.require(:booking).permit(:email, :name, :phone_number, :number_of_visitors, :time)
+  end
+
+  def create
+    if @booking = Booking.create!(booking_params)
       # success
     else
       # error handling
     end
-  end
-
-  def initialize(attributes = {})
-    assign_attributes(attributes)
-  end
-
-  def assign_attributes(values, options = {})
-    sanitize_for_mass_assignment(values, options[:as]).each do |k, v|
-      send("#{k}=", v)
+    redirect_to :action => :list
   end
 end
-  #
-  # def create
-  #   @booking = Booking.new(params[:booking])
-  #   if @booking.save
-  #     flash[:booking_id] = @booking.id
-  #     redirect_to "www.hillsidekitchen.co.nz"
-  #   else
-  #     render :action => "new"
-  #   end
-  # end
-  # def show
-  # @booking = Booking.find(params[:id])
-  # redirect_to @booking.url
-  # end

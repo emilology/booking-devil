@@ -16,6 +16,22 @@ Cell Phone: <%= f.text_field :phone_number %><br />
 <% end %> -->
 
 
+------------
+
+# def create
+#   @booking = Booking.new(params[:booking])
+#   if @booking.save
+#     flash[:booking_id] = @booking.id
+#     redirect_to "www.hillsidekitchen.co.nz"
+#   else
+#     render :action => "new"
+#   end
+# end
+# def show
+# @booking = Booking.find(params[:id])
+# redirect_to @booking.url
+# end
+
 ---------
 
 # get 'booking', :to => redirect('/bookings#new')

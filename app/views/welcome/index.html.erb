@@ -7,6 +7,6 @@
 <h1>All the bookings ever</h1>
 
 
-<% @booking.each do |t| %>
-  <li> <%= t.booking %> </li>
+<% @bookings.each do |booking| %>
+  <li> <%= booking.name %> </li>
 <% end %>

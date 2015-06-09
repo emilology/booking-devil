@@ -5,14 +5,29 @@ Rails.application.routes.draw do
 
   get 'pages/book'
 
+  root to: 'bookings#list'
+
+  post 'bookings/new'
+  post 'bookings/create'
+end
+#
+# SimpleCms::Application.routes.draw do
+#
+#   resources :bookings
+#   root :to => "booking#new"
+#
+#   resources :tables
+#   root :to => "tables#home"
+#
+# end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root :to => 'welcome#index'
 
   # Example of regular route:
-  get 'pages/:id' => 'catalog#view'
+  # get 'pages/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -31,6 +46,8 @@ Rails.application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+
+ #Bookings
 
   # Example resource route with sub-resources:
   #   resources :products do
@@ -59,4 +76,3 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end

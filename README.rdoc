@@ -24,5 +24,13 @@ Things you may want to cover:
 * ...
 
 
+# TODO - now
+datetime picker
+
+# TODO - later
+reformat pages / page structure
+Proper HTML process form thing
+
+
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
