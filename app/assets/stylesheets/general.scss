@@ -6,6 +6,7 @@ $primary-color: #333;
 // }
 
  h1   {
+  text-align: center;
   font-family: "Raleway";
   font-style: normal;
   font-size: 18px;
@@ -28,12 +29,6 @@ $primary-color: #333;
     background-attachment: fixed;
 }
 
-
- // {
- //   background-image: url(bkg.jpg);
- //   font: 100% $font-stack;
- //   color: $primary-color;
- // }
 
  body {
    padding-top: 60px;
