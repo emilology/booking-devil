@@ -1,0 +1,33 @@
+<strong>Booking Screen 3</strong>
+<h1>Hillside Kitchen & Cellar</h1>
+<p>Book a table at Hillside tonight</p>
+
+<h2>Information About Hillside</h2>
+
+<p>Finally, how can we get in touch?</p>
+
+<body class="Booking details step Three">
+  <% form_for @booking, :url => {:action => 'create', :controller => 'one'}, :method => :post do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+    <div>
+      <%= f.label :phone_number %>
+      <%= f.text_field :phone_number %>
+    </div>
+    <div>
+      <%= f.label :number_of_visitors %>
+      <%= f.text_field :number_of_visitors %>
+    </div>
+    <div>
+      <%= f.label :time %>
+      <%= f.datetime_field :time, class: 'datetimepicker' %>
+    </div>
+</body>
+  <%= f.submit %>
+  <% end %>
