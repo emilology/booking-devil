@@ -1,0 +1,56 @@
+<h1 class="logo">Hillside Kitchen & Cellar>
+
+<div id="headerimg">
+	<img src="...images/logo.png" alt="Hillside Kitchen & Cellar" style="width:12px;height:12px"/>
+</div>
+</h1>
+
+<header id="HEADER_1">
+		<!-- Hillside Kitchen & Cellar, Local Wellington Restaurant Tinakori Road-->
+	<ul id="UL_1">
+		<li id="LI_1">
+			<a href="/" id="A1">Bookings</a>
+		</li>
+		<li id="LI_2">
+			<a href="/page/tables" id="A2">Book Now</a>
+		</li>
+		<li id="LI_3">
+			<a href="http://hillsidekitchen.co.nz" id="A3">Home Page</a>
+		</li>
+	</ul>
+</header>
+
+<body class="landing-page">
+<h2>Hello Hillside! Here are all your bookings:</h2>
+
+<a class="button" href=/page/tables>Book a Table Now</a>
+
+<% @bookings.each do |booking| %>
+
+<p>
+  <div>
+    <%= booking.name || 'No Name Provided' %>
+  </div>
+  <div>
+  <%= booking.phone_number || 'No phone number provided' %>
+  </div>
+  <div>
+  <%= booking.number_of_visitors || 'No booking time provided' %>
+  </div>
+  <div>
+  <%= booking.email || 'No email address provided' %>
+  </div>
+  <div>
+  <%= booking.time || 'Not created' %>
+  </div>
+  <div>
+  <% booking.tables.each do |table| %>
+  <%= "table: #{table.id}" %>
+  <% end %>
+  </div>
+
+</p>
+<% end %>
+
+<!-- <h2>And here are their phone numbers:</h2> -->
+</body>

@@ -1,0 +1,12 @@
+<h1>Welcome to Hillside!</h1>
+
+<a href=/page/tables>To make a booking, click here</a>
+
+
+<title>Bookings</title>
+<h1>All the bookings ever</h1>
+
+
+<% @bookings.each do |booking| %>
+  <li> <%= booking.name %> </li>
+<% end %>

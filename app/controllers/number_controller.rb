@@ -1,0 +1,2 @@
+class NumberController < ApplicationController
+end
