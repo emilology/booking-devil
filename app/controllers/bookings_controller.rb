@@ -1,26 +1,26 @@
 class BookingsController < ApplicationController
-
-  @booking = Booking.new
-
-  def create
+  def booking
     @booking = Booking.new
   end
 
-  def update
-      @booking = Booking.new
+  def list
+  @bookings = Booking.order("id ASC")
   end
-  def index
-    @bookings = Booking.all
-  end
+
   def show
-    @booking = Booking.find_by(id: params[:id])
+  @booking = Booking.find(params[:id])
   end
 
   def booking_params
     params.require(:booking).permit(:email, :name, :phone_number, :number_of_visitors, :time)
   end
 
-  def list
-    @booking = Booking.order("id ASC")
+  def create
+    if @booking = Booking.create!(booking_params)
+      # success
+    else
+      # error handling
+    end
+    redirect_to :action => :list
   end
 end

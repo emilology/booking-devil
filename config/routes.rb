@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  get 'one/one'
+  get 'page/tables'
 
-  get 'three/three'
+  get 'pages/book'
 
   root to: 'bookings#list'
 
