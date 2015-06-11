@@ -1,17 +1,82 @@
 $font-stack:    Georgia, sans-serif;
 $primary-color: #333;
+//
+//
 
-// .background-image {
-//   background-image: url("/images/bkg.jpg");
-// }
+.logo {
+  font-size: 100;
+  font-size-adjust: none;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-position: 0% 100%;
+  // background-attachment: fixed;
+  position: relative;
+  height: 16px;
+  width: 100%;
+  top: 0%;
+  z-index: 9998;
+
+}
+
+header {
+  position: relative;
+  box-sizing: border-box;
+    height: 50px;
+  background-color: white;
+    opacity: 80;
+  letter-spacing: 3px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 20px none rgb(247, 246, 245);
+  font-size: 12px/15px;
+  color: #282828;
+  list-style: none outside none;
+  outline: rgb(247, 246, 245) none 0px;
+  margin-top: 100px;
+
+}
+
+.LI_1 {
+  box-sizing: border-box;
+  position:relative;
+  height: 45px;
+}
+// //
+// back to normal
+//
 
  h1   {
   text-align: center;
   font-family: "Raleway";
   font-style: normal;
   font-size: 18px;
-   color: #CAF1EE;
+  color: #282828;
  }
+
+ /* unvisited link */
+ a:link {
+     color: #3D1400;
+ }
+
+ /* visited link */
+ a:visited {
+     color: #502B19;
+ }
+
+ /* mouse over link */
+ a:hover {
+     color: #180800;
+ }
+
+ /* selected link */
+ a:active {
+     color: #180800;
+ }
+// TODO - define classes and buttons with formats
+
+ // class="landing"
+ // class="button"
 
 
 .opaque1 {

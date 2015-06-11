@@ -25,7 +25,8 @@ Things you may want to cover:
 
 
 # TODO - now
-datetime picker
+header for all pages
+define classes and buttons with formats
 
 # TODO - later
 reformat pages / page structure
