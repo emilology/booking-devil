@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   def booking
     @booking = Booking.new
   end

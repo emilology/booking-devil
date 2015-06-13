@@ -32,26 +32,21 @@
     <%= f.label :time %>
     <%= f.datetime_field :time, class: 'datetimepicker' %>
   </div>
-  <div>
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
+
 </body>
 
 <% end %>
 <div class="table-map">
   <h1> Now pick a table:</h1>
-
-
 </div>
-
-
-
-
 
 <body class="Booking details step two">
 <%= form_for @booking, :url => {:action => 'create', :controller => 'bookings'}, :method => :post do |f| %>
-  <div>
+	<div>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+	</div>
+	<div>
     <%= f.label :name %>
     <%= f.text_field :name %>
   </div>

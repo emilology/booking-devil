@@ -15,9 +15,8 @@
  *= require_self
  */
 
-
  /*Strip the ul of padding and list styling*/
-ul {
+/*ul {
 	list-style-type:none;
 	margin:0;
 	padding:0;
@@ -46,7 +45,7 @@ li a {
 
  /*Hover state for top level links*/
 li:hover a {
- 	background: #19c589;
+ 	background: #BDD8D5;
  }
 
  /*Style for dropdown links*/
@@ -101,4 +100,4 @@ ul li a:hover + .hidden, .hidden:hover {
 	ul li, li a {
 		width: 100%;
 	}
-}
+}*/
