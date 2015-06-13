@@ -1,14 +1,8 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  resources :bookings
 
-  get 'page/tables'
+  root to: 'bookings#book'
 
-  get 'pages/book'
-
-  root to: 'bookings#list'
-
-  post 'bookings/new'
-  post 'bookings/create'
 end
 #
 # SimpleCms::Application.routes.draw do
