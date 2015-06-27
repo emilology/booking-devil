@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   resources :bookings
 
+
+root :to => "bookings#new"
 end
-#
+
+
 # SimpleCms::Application.routes.draw do
 #
 #   resources :bookings
-#   root :to => "booking#new"
-#
 #   resources :tables
 #   root :to => "tables#home"
 #
