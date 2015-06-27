@@ -1,2 +1,0 @@
-class NumberController < ApplicationController
-end

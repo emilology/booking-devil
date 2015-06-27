@@ -1,26 +1,54 @@
 class BookingsController < ApplicationController
-  def booking
-    @booking = Booking.new
+  before_action :load_booking, only: [:show, :update, :edit, :destroy]
+  before_action :load_wizard, only: [:new, :edit, :create, :update]
+
+  def index
+    @booking = Booking.all
   end
 
-  def list
-  @bookings = Booking.order("id ASC")
+    def show
+    end
+
+  def new
+    @booking = @wizard.object
   end
 
-  def show
-  @booking = Booking.find(params[:id])
-  end
-
-  def booking_params
-    params.require(:booking).permit(:email, :name, :phone_number, :number_of_visitors, :time)
+  def edit
   end
 
   def create
-    if @booking = Booking.create!(booking_params)
-      # success
+    @booking = @wizard.object
+    if @wizard.save
+      redirect_to @booking, notice: "Thank you #{@booking.name}, your booking has been created! See you then. You may cancel with 48 hours notice."
     else
-      # error handling
+      render :new
     end
-    redirect_to :action => :list
+  end
+
+  def update
+    if @wizard.save
+      redirect_to @booking, notice: "Booking was successfully updated."
+    else
+      render action: 'edit'
+    end
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to bookings_url
+  end
+
+private
+
+  def load_booking
+    @booking = Booking.find(params[:id])
+  end
+  def load_wizard
+    @wizard = ModelWizard.new(@booking || Booking, session, params)
+    if self.action_name.in? %w[new edit]
+      @wizard.start
+    elsif self.action_name.in? %w[create update]
+      @wizard.process
+    end
   end
 end

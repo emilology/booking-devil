@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @booking.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @booking.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @booking.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @booking.quantity %>
+</p>
+
+<p>
+  <strong>Category names:</strong>
+  <%= @booking.categories.map(&:name).join(", ") %>
+</p>
+
+<p>
+  <strong>Available at:</strong>
+  <%= @booking.available_at %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @booking.tags %>
+</p>
+
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>
