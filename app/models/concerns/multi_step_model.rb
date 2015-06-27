@@ -42,7 +42,7 @@ module MultiStepModel
     if /^step(\d+)\?$/ =~ method_name
       step?($1.to_i)
     else
-      super
+      puts "oh no big bad error"
     end
   end
 

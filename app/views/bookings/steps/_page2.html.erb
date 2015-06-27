@@ -1,6 +1,13 @@
-<h1> What date would you like to eat?</h1>
+<h1> Great, now pick a table</h1>
 
 <div class="field">
   <%= f.label :chosen_table %><br />
   <%= f.text_field :chosen_table %>
 </div>
+
+<%= f.fields_for :categories do |cf| %>
+  <div class="field">
+    <%= cf.label :name, "Category name (nested model field):" %><br />
+    <%= cf.text_field :name %>
+  </div>
+<% end %>

@@ -1,21 +1,19 @@
 class BookingsController < ApplicationController
-before_action :load_product, only: [:show, :update, :edit, :destroy]
-before_action :load_wizard, only: [:booking, :edit, :create, :update]
+  before_action :load_booking, only: [:show, :update, :edit, :destroy]
+  before_action :load_wizard, only: [:new, :edit, :create, :update]
 
-  def booking
+  def index
+    @booking = Booking.all
+  end
+
+    def show
+    end
+
+  def new
     @booking = @wizard.object
   end
 
-  def list
-  @bookings = Booking.order("id ASC")
-  end
-
-  def show
-  @booking = Booking.find(params[:id])
-  end
-
-  def booking_params
-    params.require(:booking).permit(:email, :name, :phone_number, :number_of_visitors, :time)
+  def edit
   end
 
   def create
@@ -35,14 +33,19 @@ before_action :load_wizard, only: [:booking, :edit, :create, :update]
     end
   end
 
+  def destroy
+    @booking.destroy
+    redirect_to bookings_url
+  end
+
 private
 
-  def load_product
+  def load_booking
     @booking = Booking.find(params[:id])
   end
   def load_wizard
     @wizard = ModelWizard.new(@booking || Booking, session, params)
-    if self.action.name.in? %w[booking edit]
+    if self.action_name.in? %w[new edit]
       @wizard.start
     elsif self.action_name.in? %w[create update]
       @wizard.process

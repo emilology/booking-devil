@@ -1,6 +1,6 @@
 FactoryGirl.define do
 
-  factory :product do
+  factory :booking do
     name "Awesome t-shirt"
     quantity  50
     tags "t-shirts, fashion, tops"
