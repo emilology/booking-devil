@@ -1,20 +1,14 @@
 $font-stack:    Georgia, sans-serif;
 $primary-color: #333;
-//
-//
-
-// TODO - define classes and buttons with formats
-
- // class="landing"
- // class="button"
 
 body {
    padding-top: 60px;
    margin: 20px auto;
    text-align: center;
+   color: $primary-color;
  }
 
-#article {
+article {
     float: left;
     margin: 5px;
     padding: 5px;
