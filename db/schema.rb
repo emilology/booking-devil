@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150627035242) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "bookings", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -31,7 +34,7 @@ ActiveRecord::Schema.define(version: 20150627035242) do
     t.integer  "booking_id"
   end
 
-  add_index "categories", ["booking_id"], name: "index_categories_on_booking_id"
+  add_index "categories", ["booking_id"], name: "index_categories_on_booking_id", using: :btree
 
   create_table "seating_arrangements", force: :cascade do |t|
     t.integer  "booking_id"
