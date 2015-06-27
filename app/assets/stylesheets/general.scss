@@ -8,21 +8,6 @@ $primary-color: #333;
  // class="landing"
  // class="button"
 
-.opaque1 {
-  background:
-    /*top, transparent cream, faked with gradient*/
-    linear-gradient(
-      rgba(0, 255, 255, 0.40),
-      rgba(0, 255, 255, 0.40)
-    ),
-    /* bottom, image, currently restaurant tables*/
-    url(bkg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0% 100%;
-    background-attachment: fixed;
-}
-
 body {
    padding-top: 60px;
    margin: 20px auto;
