@@ -2,14 +2,14 @@
 
 one:
   name: MyString
-  email: MyString
+  dietary_preferences: MyString
   phone_number: MyString
   number_of_visitors: 1
   time: 2015-06-03 19:24:09
 
 two:
   name: MyString
-  email: MyString
+  dietary_preferences: MyString
   phone_number: MyString
   number_of_visitors: 1
   time: 2015-06-03 19:24:09

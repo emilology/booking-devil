@@ -26,8 +26,8 @@
 <body class="Booking details step two">
 <%= form_for @booking, :url => {:action => 'create', :controller => 'bookings'}, :method => :post do |f| %>
 	<div>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
+		<%= f.label :dietary_preferences %>
+		<%= f.text_field :dietary_preferences %>
 	</div>
 	<div>
     <%= f.label :name %>

@@ -16,12 +16,12 @@ describe "Booking pages" do
   def go_step(step)
     if step >= 2
       fill_in "booking_name", with: booking.name
-      click_button "Next"
+      click_button ">"
     end
     if step >= 3
       fill_in "booking_quantity", with: booking.quantity
       fill_in "booking_categories_attributes_0_name", with: booking.categories.first.name
-      click_button "Next"
+      click_button ">"
     end
   end
 
@@ -60,7 +60,7 @@ describe "Booking pages" do
         end
 
         it "should display error and not step forward" do
-          click_button "Next"
+          click_button ">"
           should have_selector("div.field_with_errors")
           step_1?.should be_true
         end
@@ -79,7 +79,7 @@ describe "Booking pages" do
         end
 
         it "should display error and not step forward" do
-          click_button "Next"
+          click_button ">"
           should have_selector("div.field_with_errors")
           step_2?.should be_true
         end
@@ -153,7 +153,7 @@ describe "Booking pages" do
 
         it "should display error and not step forward if invalid" do
           fill_in "booking_name", with: nil
-          click_button "Next"
+          click_button ">"
           should have_selector("div.field_with_errors")
           step_1?.should be_true
         end
@@ -167,13 +167,13 @@ describe "Booking pages" do
         end
 
         it "should go back successfully" do
-          click_button "Back"
+          click_button "<"
           step_1?.should be_true
         end
 
         it "should display error and not step forward" do
           fill_in "booking_quantity", with: nil
-          click_button "Next"
+          click_button ">"
           should have_selector("div.field_with_errors")
           step_2?.should be_true
         end
@@ -187,9 +187,9 @@ describe "Booking pages" do
         end
 
         it "should go back successfully" do
-          click_button "Back"
+          click_button "<"
           step_2?.should be_true
-          click_button "Back"
+          click_button "<"
           step_1?.should be_true
         end
 

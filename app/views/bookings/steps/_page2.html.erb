@@ -1,13 +1,7 @@
-<h1> Great, now pick a table</h1>
+
+<h1> When?</h1>
 
 <div class="field">
-  <%= f.label :chosen_table %><br />
-  <%= f.text_field :chosen_table %>
+  <%= f.label :time %><br />
+  <%= f.datetime_field :time, class: 'datetimepicker' %>
 </div>
-
-<%= f.fields_for :categories do |cf| %>
-  <div class="field">
-    <%= cf.label :name, "Category name (nested model field):" %><br />
-    <%= cf.text_field :name %>
-  </div>
-<% end %>
