@@ -13,7 +13,7 @@
   <%= render "bookings/steps/page#{@booking.current_step + 1}", f: f %>
 
 <div class="field">
-  <%= f.submit "Back", name: "back_button" unless @booking.first_step? %>
-  <%= f.submit @booking.last_step? ? nil: "Next" %>
+  <%= f.submit "<", name: "back_button" unless @booking.first_step? %>
+  <%= f.submit @booking.last_step? ? nil: ">" %>
 </div>
 <% end %>
