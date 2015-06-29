@@ -7,8 +7,4 @@ FactoryGirl.define do
     categories { build_list :category, 1 }
   end
 
-  factory :category do
-    name "T-Shirts"
-  end
-
 end

@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 20150628023415) do
 
   create_table "bookings", force: :cascade do |t|
     t.string   "name"
-    t.string   "email"
+    t.string   "dietary_preferences"
     t.string   "phone_number"
     t.integer  "number_of_visitors"
     t.datetime "time"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.string   "dietary_preference"
   end
 
@@ -32,10 +32,7 @@ ActiveRecord::Schema.define(version: 20150628023415) do
     t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "booking_id"
   end
-
-  add_index "categories", ["booking_id"], name: "index_categories_on_booking_id", using: :btree
 
   create_table "seating_arrangements", force: :cascade do |t|
     t.integer  "booking_id"
