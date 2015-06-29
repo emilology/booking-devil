@@ -11,16 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150627035242) do
+ActiveRecord::Schema.define(version: 20150628023415) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
     t.string   "name"
-    t.string   "email"
+    t.string   "dietary_preferences"
     t.string   "phone_number"
     t.integer  "number_of_visitors"
     t.datetime "time"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "dietary_preference"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -28,10 +32,7 @@ ActiveRecord::Schema.define(version: 20150627035242) do
     t.integer  "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "booking_id"
   end
-
-  add_index "categories", ["booking_id"], name: "index_categories_on_booking_id"
 
   create_table "seating_arrangements", force: :cascade do |t|
     t.integer  "booking_id"

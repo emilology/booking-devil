@@ -4,11 +4,9 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Quantity</th>
-      <th>Available at</th>
-      <th>Tags</th>
+      <th>Phone Number</th>
+      <th>Guests</th>
+      <th>Time</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,11 +17,9 @@
     <% @booking.each do |booking| %>
     <tr>
       <td><%= booking.name %></td>
-      <td><%= booking.description %></td>
-      <td><%= booking.price %></td>
-      <td><%= booking.quantity %></td>
-      <td><%= booking.available_at %></td>
-      <td><%= booking.tags %></td>
+      <td><%= booking.phone_number %></td>
+      <td><%= booking.number_of_visitors %></td>
+      <td><%= booking.time %></td>
       <td><%= link_to 'Show', booking %></td>
       <td><%= link_to 'Edit (with steps)', edit_booking_path(booking) %></td>
       <td><%= link_to 'Edit (all fields)', edit_booking_path(booking, all: 1) %></td>

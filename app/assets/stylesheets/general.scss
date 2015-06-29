@@ -1,35 +1,14 @@
 $font-stack:    Georgia, sans-serif;
 $primary-color: #333;
-//
-//
-
-// TODO - define classes and buttons with formats
-
- // class="landing"
- // class="button"
-
-.opaque1 {
-  background:
-    /*top, transparent cream, faked with gradient*/
-    linear-gradient(
-      rgba(242, 240, 188, 0.40),
-      rgba(242, 240, 188, 0.40)
-    ),
-    /* bottom, image, currently restaurant tables*/
-    url(bkg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0% 100%;
-    background-attachment: fixed;
-}
 
 body {
    padding-top: 60px;
    margin: 20px auto;
    text-align: center;
+   color: $primary-color;
  }
 
-#article {
+article {
     float: left;
     margin: 5px;
     padding: 5px;
