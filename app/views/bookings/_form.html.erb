@@ -11,9 +11,9 @@
 <%= form_for build_booking(@booking) do |f| %>
   <%= f.hidden_field :current_step, value: @booking.current_step %>
   <%= render "bookings/steps/page#{@booking.current_step + 1}", f: f %>
-
+<br></br>
 <div class="field">
   <%= f.submit "<", name: "<" unless @booking.first_step? %>
   <%= f.submit @booking.last_step? ? nil: ">" %>
-</div>
+</div><br></br>
 <% end %>

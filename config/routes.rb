@@ -1,12 +1,22 @@
 Rails.application.routes.draw do
+
+
+  get 'bookings/edit'
+
   resources :bookings
-
-
 root :to => "bookings#new"
-end
-
 
 # SimpleCms::Application.routes.draw do
+  get 'bookings/edit'
+
+  get "pages/admin"
+  get "welcome/index"
+  get "bookings/new"
+  get "bookings/show"
+  get "bookings/tables"
+
+end
+
 #
 #   resources :bookings
 #   resources :tables
@@ -62,10 +72,3 @@ end
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/bookings/* to Admin::BookingsController
-  #     # (app/controllers/admin/bookings_controller.rb)
-  #     resources :bookings
-  #   end

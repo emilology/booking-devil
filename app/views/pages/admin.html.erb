@@ -1,0 +1,83 @@
+<h1>All bookings, in future sorted date/ hour / tables with name, number, diet</h1>
+<body>
+
+<a href="bookings/new">Book Now</a>
+
+<a href="bookings/show">Show</a>
+
+<a href="bookings/tables">Tables</a>
+
+
+
+<!-- <%= f.hidden_field :current_step, value: @booking.current_step %>
+<%= render "bookings/steps/page#{@booking.current_step + 1}", f: f %> -->
+
+
+<h2>Full Booking Form</h2>
+
+<h1>How many people in your group?</h1>
+
+<%= form_for build_booking(@booking) do |f| %>
+
+<br></br>
+
+<div class="field">
+    <%= f.label :number_of_visitors %><br />
+    <%= f.text_area :number_of_visitors %>
+</div>
+
+<h1> When?</h1>
+
+<div class="field">
+  <%= f.label :time %><br />
+  <%= f.datetime_field :time, class: 'datetimepicker' %>
+</div>
+<h1>Further information</h1>
+<h2>(Dietary requirements)</h2>
+
+<div class="field">
+  <%= f.label :dietary_preferences %><br />
+  <%= f.text_area :dietary_preferences %>
+</div>
+
+<h1>Contact details</h1>
+
+<div class="field">
+  <%= f.label :name %><br />
+  <%= f.text_area :name %>
+</div>
+
+<div class="field">
+  <%= f.label :phone_number %><br />
+  <%= f.text_area :phone_number %>
+</div>
+<% if @booking.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+    <% @booking.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= f.submit "<", name: "<" %>
+</div><br></br>
+<% end %>
+</body>
+
+<h1>All bookings, in future sorted date/ hour / tables with name, number, diet</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Guests</th>
+      <th>Dietary Preferences</th>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
