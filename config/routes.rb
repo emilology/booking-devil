@@ -1,19 +1,13 @@
 Rails.application.routes.draw do
 
-
-  get 'bookings/edit'
-
   resources :bookings
-root :to => "bookings#new"
+  root :to => "bookings#new"
 
 # SimpleCms::Application.routes.draw do
-  get 'bookings/edit'
-
-  get "pages/admin"
-  get "welcome/index"
-  get "bookings/new"
-  get "bookings/show"
-  get "bookings/tables"
+  get 'pages/admin'
+  get 'welcome/index'
+  get 'layouts/application'
+  get 'number/number'
 
 end
 
