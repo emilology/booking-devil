@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :bookings
   root :to => "bookings#new"
+  # get 'bookings/:id' =>'booking#show'
 
 # SimpleCms::Application.routes.draw do
   get 'pages/admin'

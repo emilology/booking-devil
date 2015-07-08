@@ -1,12 +1,12 @@
-  <% if @booking.errors.any? %>
-    <div id="error_explanation">
-      <ul>
-      <% @booking.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<% if @booking.errors.any? %>
+  <div id="error_explanation">
+    <ul>
+    <% @booking.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
 
 <%= form_for build_booking(@booking) do |f| %>
   <%= f.hidden_field :current_step, value: @booking.current_step %>
