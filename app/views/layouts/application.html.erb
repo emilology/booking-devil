@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html class="opaque1">
 
-
-
 <header role="banner">
   <div class="content">
     <nav class="container">
       <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="#">about</a></li>
-        <li><a href="#">contact</a></li>
+        <li><a href="#">hillside kitchen</a></li>
+        <li><a href="#">events</a></li>
+        <li><a href="#">call us up</a></li>
       </ul>
     </nav>
   </div>
@@ -23,8 +21,6 @@
     </div>
   </div>
 </header>
-
-
 <head>
   <title>Hillside Kitchen & Cellar Wellington: Restaurant Booking Web App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -41,9 +37,8 @@
 </head>
   <%= csrf_meta_tags %>
 </head>
-<body class="background-image">
-
-<%= yield %>
-
+<body>
+  <%= image_tag("logo.png", size: "240x240", alt: "Hillside Logo") %>
+  <%= yield %>
 </body>
 </html>

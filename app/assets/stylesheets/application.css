@@ -29,11 +29,24 @@ body {
   padding-top: 120px;
   margin: 20px;
   text-align: center;
-  color: $primary-color;
+  color: #;
   background-color: #FFE4C4;
   width: 100%;
   height: 100%;
 }
+
+textarea {
+  background: pink;
+	resize: none;
+	width: 250px;
+	height: 80px;
+  border: 1px solid #888;
+	text-align: center;
+	font-family: inherit;
+	font-size: 40px;
+	font-weight: bold;
+}
+
 
 article {
   font-family: 'ostrich-sans';
@@ -44,11 +57,12 @@ article {
   height: 300px;
   border: 1px solid black;
   color: #7e989c;
-  }
+}
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: black;
+	position:relative;
   display: table;
 }
 
@@ -64,8 +78,9 @@ li {
 	background-color: #FFE4C4;
 	margin:auto;
 	position:relative;
+	text-align:center;
 	width:550px;
-	height:450px;
+	height:650px;
 }
 
 .form span.error {
@@ -73,7 +88,7 @@ li {
 	margin:auto;
 	position:inherit;
 	width:550px;
-	height:450px;
+	height:650px;
 	font-weight: bold;
 }
 
@@ -102,7 +117,7 @@ thanks codepen http://codepen.io/chrisdothtml/pen/Bybxpa*/
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 *:focus {
   outline: none;
@@ -116,20 +131,6 @@ thanks codepen http://codepen.io/chrisdothtml/pen/Bybxpa*/
 .animate-ease, header .content {
   -webkit-transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.59);
           transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.59);
-}
-
-.containerh {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 15px;
-  position: relative;
-}
-
-.logo {
-	float: none;
-	margin: 0 auto;
-	width: 200px;
 }
 
 header .content {
