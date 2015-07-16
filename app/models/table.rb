@@ -1,4 +1,5 @@
 class Table < ActiveRecord::Base
+belongs_to :combination, class: Table
 
 # if combinable?
 #
