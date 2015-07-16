@@ -5,7 +5,7 @@
   <div class="content">
     <nav class="container">
       <ul>
-        <li><a href="#">hillside kitchen</a></li>
+        <li><a href="#">hillside</a></li>
         <li><a href="#">events</a></li>
         <li><a href="#">call us up</a></li>
       </ul>
@@ -36,9 +36,12 @@
   <meta name="keywords" content="restaurant,dinner,lunch,fine dining,bistronomy">
 </head>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
   <%= image_tag("logo.png", size: "240x240", alt: "Hillside Logo") %>
   <%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </body>
 </html>

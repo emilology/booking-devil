@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :admins, ActiveAdmin::Devise.config
 
+  ActiveAdmin.routes(self)
+
+  resources :admins, except: :destroy
   resources :bookings
   root :to => "bookings#new"
   # get 'bookings/:id' =>'booking#show'
