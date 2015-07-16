@@ -30,7 +30,7 @@ body {
   margin: 20px;
   text-align: center;
   color: #;
-  background-color: #FFE4C4;
+  background-color: #F6edee;
   width: 100%;
   height: 100%;
 }
@@ -75,10 +75,9 @@ li {
 }
 
 .form {
-	background-color: #FFE4C4;
+	background-color: #F6edee;
 	margin:auto;
 	position:relative;
-	text-align:center;
 	width:550px;
 	height:650px;
 }
