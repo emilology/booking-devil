@@ -1,0 +1,55 @@
+// SASS variable overrides must be declared before loading up Active Admin's styles.
+//
+// To view the variables that Active Admin provides, take a look at
+// `app/assets/stylesheets/active_admin/mixins/_variables.css.scss` in the
+// Active Admin source.
+//
+// For example, to change the sidebar width:
+// $sidebar-width: 242px;
+
+// Active Admin's got SASS!
+@import "active_admin/mixins";
+@import "active_admin/base";
+@import "chosen";
+@import "active_admin/chosen";
+@import "active_admin/numeric_range";
+@import "active_admin/sortable_forms";
+// Overriding any non-variable SASS must be done after the fact.
+// For example, to change the default status-tag color:
+
+.status_tag {
+  background-color: #F6edee;
+}
+
+.wysihtml5-sandbox {
+  box-sizing: border-box;
+}
+
+#modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none;
+  opacity: 0.6;
+}
+
+.activeadmin-wysihtml5-modal {
+  background-color: white;
+  width: 550px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+  .modal-title {
+    border-bottom: 1px solid #ccc;
+    background-color: #F1F1F1;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 110%;
+    border-top-radius: 5px;
+  }

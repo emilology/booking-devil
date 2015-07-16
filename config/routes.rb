@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   # get 'bookings/:id' =>'booking#show'
 
 # SimpleCms::Application.routes.draw do
-  get 'pages/admin'
+  get 'pages/admin' => 'admin#login'
   get 'welcome/index'
   get 'layouts/application'
   get 'number/number'
