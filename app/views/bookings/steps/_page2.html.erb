@@ -5,5 +5,8 @@
 
 <div class="field">
   <%= f.label :time %><br />
-  <%= f.datetime_field :time, class: 'datetimepicker' %>
+  <%= f.date_field :date%>
+  <%= f.select :time, [
+     ["5pm", 17], ["6pm", 18], ["7pm", 19], ["8pm", 20], ["9pm", 21]
+], class:''%>
 </div>

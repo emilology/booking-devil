@@ -16,18 +16,20 @@
  */
 
 @font-face {
-	font-family: 'ostrich-sans';
-	src: url("OstrichSans-Light.otf");
+	font-family: "Raleway";
 }
 
 html {
   box-sizing: border-box;
 }
+h1 {
+	font-weight: 200;
+	font-size: 30px;	
+}
 
 body {
-	font-family: 'ostrich-sans';
-  padding-top: 120px;
-  margin: 20px;
+	font-family: 'Raleway';
+  padding-top: 10px;
   text-align: center;
   color: #;
   background-color: #F6edee;
@@ -48,15 +50,13 @@ textarea {
 }
 
 a {
-	font-family: 'comic-sans';
+	font-family: 'ostrich-sans';
 	font-size: 20px;
-	padding-top: 120px;
 	margin: 20px;
 	text-align: center;
-	color: #;
 	background-color: #F6edee;
-	width: 100%;
-	height: 100%;
+	text-decoration: initial;
+	color: #000000;
 }
 
 article {
@@ -226,4 +226,8 @@ header.expanded .handle .bars .bar:nth-child(3) {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
 }

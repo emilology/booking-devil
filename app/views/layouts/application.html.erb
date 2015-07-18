@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="opaque1">
-
 <header role="banner">
   <div class="content">
     <nav class="container">
@@ -23,6 +22,7 @@
 </header>
 <head>
   <title>Hillside Kitchen & Cellar Wellington: Restaurant Booking Web App</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:500,900,200' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <!--
@@ -35,7 +35,7 @@
   <meta name="Hillside Kitchen & Cellar" content="Fine Dining in Thorndon Wellington, New Zealand">
   <meta name="keywords" content="restaurant,dinner,lunch,fine dining,bistronomy">
   <%= csrf_meta_tags %>
-  <%= image_tag("logo.png", size: "240x240", alt: "Hillside Logo") %>
+  <%= image_tag("logo.png", size: "200x200", alt: "Hillside Logo") %>
   <%= yield %>
 </head>
 <body>
