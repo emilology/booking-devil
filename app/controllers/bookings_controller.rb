@@ -32,10 +32,28 @@ class BookingsController < ApplicationController
     # check availability for tables
     ## how much time do we need?
     needed_time = @@timeslots[guests-1]
-    ## which possible start times do I have?
-    ## which table has that amount of time available?
 
-    render json: {times:['7:30', '8:00', '8:30', '9:00'], date: booking_date, tables: tables, needed_time: needed_time}
+    ## which possible start times do I have? -> @@booking_times
+
+    ## which table has that amount of time available starting at those times?
+    ## -->
+    ### for each table
+    #### get bookings
+    #### check, for each start time, if its interval (start time -- start time + needed_time) overlaps any existing booking
+    #### if it doesn't, save it for returning it
+    available_times = []
+    #### available_times.push(start_time)
+
+    ## for each booking add end time dependent on needed_time
+    ## look into partial / SQL view for database to see if you can make new table saying "tables free this night for 2s / 4s / 6s if this process is too slow."
+
+    render json: {times:available_times, date: booking_date, tables: tables, needed_time: needed_time}
+
+
+    # in your datepicker, if you choose the jquery-ui one at least, you'll have a function that will run
+    # before enabling a day. In that function you'll have to call this endpoint to figure out if you have availability for
+    # the day and the amount of guests and, based on this response, choose to grey out the day or not.
+    # Remember to grey out sundays and mondays every time.
   end
 
   def edit
