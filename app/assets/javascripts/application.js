@@ -15,6 +15,9 @@
 //= require jquery.datetimepicker
 //= require jquery.datetimepicker/init
 //= require turbolinks
+//= require pickadate/picker
+//= require pickadate/picker.date
+//= require pickadate/picker.time
 //= require_tree .
 
 (function () {

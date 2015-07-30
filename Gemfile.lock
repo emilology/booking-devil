@@ -124,6 +124,8 @@ GEM
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pg (0.18.2)
+    pickadate-rails (3.5.5.0)
+      railties (>= 3.1.0)
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     rack (1.6.1)
@@ -216,6 +218,7 @@ DEPENDENCIES
   jquery-datetimepicker-rails (~> 2.4.1.0)
   jquery-rails
   pg
+  pickadate-rails (~> 3.5.5.0)
   rails (= 4.2.1)
   rails_12factor
   sass-rails

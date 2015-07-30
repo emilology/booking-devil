@@ -5,8 +5,6 @@
 
 <div class="field">
   <%= f.label :time %><br />
-  <%= f.date_field :date%>
-  <%= f.select :time, [
-     ["5pm", 17], ["6pm", 18], ["7pm", 19], ["8pm", 20], ["9pm", 21]
-], class:''%>
+  <%= f.date_field :date, class: 'bkgdevil-datepicker'%>
+  <%= f.text_field :time, class: 'bkgdevil-timepicker'%>
 </div>
