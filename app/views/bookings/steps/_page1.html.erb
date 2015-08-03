@@ -1,9 +1,30 @@
+<div id="progress-bar">
+  <h2 class="off-screen">Booking progress indicator</h2>
+  <ol id="progress-steps">
+    <li class="progress-step" style="width: 20%;">
+      <span class="count highlight-index"></span>
+      <span class="current-donation-step off-screen">current donation step:</span>
+    </li>
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="count"></span>
+    </li>
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="count"></span>
+    </li>
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="count"></span>
+    </li>
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="count"></span>
+    </li>
+  </ol>
+</div>
+<br></br>
 <body>
-  <h1>How many people in your group?</h1>
+  <h1>How many people in your group?</h1><br></br>
 <div class="field">
-  <%= f.label :number_of_guests %><br />
   <%= f.text_area :number_of_visitors %>
 </div>
-<a href="/pages/admin">Admin login</a>
+<a href="/admin/login">Admin login</a>
 <a href="/bookings/edit">Edit an existing booking</a>
 </body>

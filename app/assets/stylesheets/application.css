@@ -10,13 +10,15 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
 
- *= require jquery.datetimepicker
  *= require_tree .
  *= require_self
- *= require pickadate/classic
- *= require pickadate/classic.date
- *= require pickadate/classic.time
+ *= require pickadate/default
+ *= require pickadate/default.date
+ *= require pickadate/default.time
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 @font-face {
 	font-family: "Raleway";
@@ -125,7 +127,7 @@ li {
 	display:inline-block;
 }
 
-input:required {
+/*input:required {
 	box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
 	position:inherit;
 	border: 1px solid black;
@@ -133,7 +135,7 @@ input:required {
 
 input:required:hover {
   opacity: 1;
-}
+}*/
 
 /* this is the bit for the header I'm trialling
 thanks codepen http://codepen.io/chrisdothtml/pen/Bybxpa*/
@@ -246,4 +248,48 @@ header.expanded .handle .bars .bar:nth-child(3) {
 
 input::-webkit-calendar-picker-indicator {
   display: none;
+}
+
+
+/* button styling */
+
+.ghost-btn {
+  font-family: "Arial";
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #3f6fa0;
+  height: 36px;
+  line-height: 36px;
+  color: #3f6fa0;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  font-size: 1em;
+  padding: .5em 1.5em;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: #ffffff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  zoom: 1;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+}
+.ghost-btn:hover {
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background-color: #3f6fa0;
+  color: #ffffff;
+}
+.ghost-btn:focus {
+  outline: none;
 }
