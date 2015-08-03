@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require jquery.datetimepicker
-//= require jquery.datetimepicker/init
+//= require bootstrap-sprockets
 //= require turbolinks
+//= require pickadate/picker
+//= require pickadate/picker.date
+//= require pickadate/picker.time
 //= require_tree .
 
 (function () {

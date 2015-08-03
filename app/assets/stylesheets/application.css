@@ -10,24 +10,31 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
 
- *= require jquery.datetimepicker
  *= require_tree .
  *= require_self
+ *= require pickadate/default
+ *= require pickadate/default.date
+ *= require pickadate/default.time
  */
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 @font-face {
-	font-family: 'ostrich-sans';
-	src: url("OstrichSans-Light.otf");
+	font-family: "Raleway";
 }
 
 html {
   box-sizing: border-box;
 }
+h1 {
+	font-weight: 200;
+	font-size: 30px;
+}
 
 body {
-	font-family: 'ostrich-sans';
-  padding-top: 120px;
-  margin: 20px;
+	font-family: 'Raleway';
+  padding-top: 10px;
   text-align: center;
   color: #;
   background-color: #F6edee;
@@ -44,13 +51,23 @@ textarea {
 	text-align: center;
 	font-family: inherit;
 	font-size: 40px;
-	font-weight: bold;
+	font-weight: normal;
 }
 
+a {
+	font-family: 'ostrich-sans';
+	font-size: 20px;
+	margin: 20px;
+	text-align: center;
+	background-color: #F6edee;
+	text-decoration: initial;
+	color: #000000;
+}
 
 article {
   font-family: 'ostrich-sans';
-  float: left;
+	text-align: center;
+	position: relative;
   margin: 5px;
   padding: 5px;
   width: 300px;
@@ -61,9 +78,15 @@ article {
 
 .field_with_errors {
   padding: 2px;
-  background-color: black;
-	position:relative;
   display: table;
+	background-color: #F6edee;
+	margin:auto;
+	position:relative;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 10px;
+
 }
 
 /*Create a horizontal list with spacing*/
@@ -78,17 +101,21 @@ li {
 	background-color: #F6edee;
 	margin:auto;
 	position:relative;
-	width:550px;
-	height:650px;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 10px;
 }
 
 .form span.error {
 	background-color: light-grey;
 	margin:auto;
-	position:inherit;
+	position: relative;
+	text-align: center;
 	width:550px;
 	height:650px;
 	font-weight: bold;
+
 }
 
 .loginform {
@@ -100,7 +127,7 @@ li {
 	display:inline-block;
 }
 
-input:required {
+/*input:required {
 	box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
 	position:inherit;
 	border: 1px solid black;
@@ -108,7 +135,7 @@ input:required {
 
 input:required:hover {
   opacity: 1;
-}
+}*/
 
 /* this is the bit for the header I'm trialling
 thanks codepen http://codepen.io/chrisdothtml/pen/Bybxpa*/
@@ -215,4 +242,54 @@ header.expanded .handle .bars .bar:nth-child(3) {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+/* this stops the browser adding a date-time picker of its own in the form*/
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+/* button styling */
+
+.ghost-btn {
+  font-family: "Arial";
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #3f6fa0;
+  height: 36px;
+  line-height: 36px;
+  color: #3f6fa0;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  font-size: 1em;
+  padding: .5em 1.5em;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: #ffffff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  zoom: 1;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+}
+.ghost-btn:hover {
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background-color: #3f6fa0;
+  color: #ffffff;
+}
+.ghost-btn:focus {
+  outline: none;
 }

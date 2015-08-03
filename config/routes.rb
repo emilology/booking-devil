@@ -5,11 +5,12 @@ Rails.application.routes.draw do
 
   resources :admin, except: :destroy
   resources :bookings
+  get 'bookings/:date/available_times' => 'bookings#available_times'
   root :to => "bookings#new"
   # get 'bookings/:id' =>'booking#show'
 
 # SimpleCms::Application.routes.draw do
-  get 'pages/admin'
+  get 'pages/admin' => 'admin#login'
   get 'welcome/index'
   get 'layouts/application'
   get 'number/number'
