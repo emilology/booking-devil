@@ -34,7 +34,6 @@ h1 {
 
 body {
 	font-family: 'Raleway';
-  padding-top: 10px;
   text-align: center;
   color: #;
   background-color: #F6edee;
@@ -43,11 +42,12 @@ body {
 }
 
 textarea {
-  background: pink;
+  background: #F6edee;
 	resize: none;
+	padding-top: 20px;
 	width: 250px;
 	height: 80px;
-  border: 1px solid #888;
+  border: 1px inset #888 #ffffff;
 	text-align: center;
 	font-family: inherit;
 	font-size: 40px;
@@ -59,7 +59,6 @@ a {
 	font-size: 20px;
 	margin: 20px;
 	text-align: center;
-	background-color: #F6edee;
 	text-decoration: initial;
 	color: #000000;
 }
@@ -127,15 +126,54 @@ li {
 	display:inline-block;
 }
 
-/*input:required {
-	box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
-	position:inherit;
-	border: 1px solid black;
+/* this styles the buttons */
+
+input {
+  font-family: "Arial";
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #4d483f;
+  height: 36px;
+  line-height: 36px;
+  color: #4d483f;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  font-size: 1em;
+  padding: .5em 1.5em;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: #ffffff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  zoom: 1;
+  -webkit-backface-visibility: hidden;
+  position: relative;
 }
 
-input:required:hover {
-  opacity: 1;
-}*/
+/* this makes the button work when mouse hovers*/
+
+input:hover {
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background-color: #4d483f;
+  color: #ffffff;
+}
+
+/* this makes the button do something else that I don't understand */
+
+input:focus {
+  outline: none;
+}
 
 /* this is the bit for the header I'm trialling
 thanks codepen http://codepen.io/chrisdothtml/pen/Bybxpa*/
@@ -187,7 +225,7 @@ header .content nav ul li a {
   text-decoration: none;
 }
 header .content nav ul li a:hover {
-  color: #7e989c;
+  color: #4d483f;
 }
 header .handle {
   background-color: #fff;
@@ -248,48 +286,4 @@ header.expanded .handle .bars .bar:nth-child(3) {
 
 input::-webkit-calendar-picker-indicator {
   display: none;
-}
-
-
-/* button styling */
-
-.ghost-btn {
-  font-family: "Arial";
-  display: inline-block;
-  text-decoration: none;
-  border: 1px solid #3f6fa0;
-  height: 36px;
-  line-height: 36px;
-  color: #3f6fa0;
-  -webkit-border-radius: 5px;
-  -webkit-background-clip: padding-box;
-  -moz-border-radius: 5px;
-  -moz-background-clip: padding;
-  border-radius: 5px;
-  background-clip: padding-box;
-  font-size: 1em;
-  padding: .5em 1.5em;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-  background: #ffffff;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  cursor: pointer;
-  zoom: 1;
-  -webkit-backface-visibility: hidden;
-  position: relative;
-}
-.ghost-btn:hover {
-  -webkit-transition: 0.2s ease;
-  -moz-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-  background-color: #3f6fa0;
-  color: #ffffff;
-}
-.ghost-btn:focus {
-  outline: none;
 }
