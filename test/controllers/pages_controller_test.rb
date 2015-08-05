@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionController::TestCase
-  test "should get book" do
-    get :book
+  test "should get admin" do
+    get :admin
     assert_response :success
   end
 

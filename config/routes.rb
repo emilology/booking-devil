@@ -1,12 +1,22 @@
 Rails.application.routes.draw do
+  devise_for :admins, ActiveAdmin::Devise.config
+
+  ActiveAdmin.routes(self)
+
+  resources :admin, except: :destroy
   resources :bookings
-
-
-root :to => "bookings#new"
-end
-
+  get 'bookings/:date/available_times' => 'bookings#available_times'
+  root :to => "bookings#new"
+  # get 'bookings/:id' =>'booking#show'
 
 # SimpleCms::Application.routes.draw do
+  get 'pages/admin' => 'admin#login'
+  get 'welcome/index'
+  get 'layouts/application'
+  get 'number/number'
+
+end
+
 #
 #   resources :bookings
 #   resources :tables
@@ -62,10 +72,3 @@ end
   #   end
   #   resources :posts, concerns: :toggleable
   #   resources :photos, concerns: :toggleable
-
-  # Example resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/bookings/* to Admin::BookingsController
-  #     # (app/controllers/admin/bookings_controller.rb)
-  #     resources :bookings
-  #   end

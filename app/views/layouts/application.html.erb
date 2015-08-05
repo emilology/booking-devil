@@ -1,7 +1,28 @@
 <!DOCTYPE html>
 <html class="opaque1">
+<header role="banner" meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <div class="content">
+    <nav class="container">
+      <ul>
+        <li><a href="http://www.hillsidekitchen.co.nz">hillside</a></li>
+        <li><a href="#">events</a></li>
+        <li><a href="#">call us up</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <div id="header-handle" class="handle">
+      <div class="bars">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+</header>
 <head>
-  <title>Hillside Kitchen & Cellar: Restaurant Booking Web App</title>
+  <title>Hillside Kitchen & Cellar Wellington: Restaurant Booking Web App</title>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:500,900,200' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <!--
@@ -11,13 +32,14 @@
   <!--[if IE]>
       <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <![endif]-->
-</head>
+  <meta name="Hillside Kitchen & Cellar" content="Fine Dining in Thorndon Wellington, New Zealand">
+  <meta name="keywords" content="restaurant,dinner,lunch,fine dining,bistronomy">
   <%= csrf_meta_tags %>
-
+  <%= image_tag("logo.png", size: "200x200", alt: "Hillside Logo") %>
+  <%= yield %>
 </head>
-<body class="background-image">
-
-<%= yield %>
-
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
 </body>
 </html>

@@ -1,0 +1,295 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+
+ *= require_tree .
+ *= require_self
+ *= require pickadate/default
+ *= require pickadate/default.date
+ *= require pickadate/default.time
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@font-face {
+	font-family: "Raleway";
+}
+
+html {
+  box-sizing: border-box;
+}
+h1 {
+	font-weight: 200;
+	font-size: 30px;
+}
+
+body {
+	font-family: 'Raleway';
+  padding-top: 10px;
+  text-align: center;
+  color: #;
+  background-color: #F6edee;
+  width: 100%;
+  height: 100%;
+}
+
+textarea {
+  background: pink;
+	resize: none;
+	width: 250px;
+	height: 80px;
+  border: 1px solid #888;
+	text-align: center;
+	font-family: inherit;
+	font-size: 40px;
+	font-weight: normal;
+}
+
+a {
+	font-family: 'ostrich-sans';
+	font-size: 20px;
+	margin: 20px;
+	text-align: center;
+	background-color: #F6edee;
+	text-decoration: initial;
+	color: #000000;
+}
+
+article {
+  font-family: 'ostrich-sans';
+	text-align: center;
+	position: relative;
+  margin: 5px;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  color: #7e989c;
+}
+
+.field_with_errors {
+  padding: 2px;
+  display: table;
+	background-color: #F6edee;
+	margin:auto;
+	position:relative;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 10px;
+
+}
+
+/*Create a horizontal list with spacing*/
+
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+}
+
+.form {
+	background-color: #F6edee;
+	margin:auto;
+	position:relative;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	font-size: 10px;
+}
+
+.form span.error {
+	background-color: light-grey;
+	margin:auto;
+	position: relative;
+	text-align: center;
+	width:550px;
+	height:650px;
+	font-weight: bold;
+
+}
+
+.loginform {
+	font-family: 'ostrich-sans';
+	color: dark grey;
+	text-decoration: none;
+	position:inherit;
+	float: none;
+	display:inline-block;
+}
+
+/*input:required {
+	box-shadow: 4px 4px 20px rgba(200, 0, 0, 0.85);
+	position:inherit;
+	border: 1px solid black;
+}
+
+input:required:hover {
+  opacity: 1;
+}*/
+
+/* this is the bit for the header I'm trialling
+thanks codepen http://codepen.io/chrisdothtml/pen/Bybxpa*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+.animate, header .content nav ul li a, header .handle .bars .bar {
+  -webkit-transition: all 0.25s;
+          transition: all 0.25s;
+}
+
+.animate-ease, header .content {
+  -webkit-transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+          transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+header .content {
+  background-color: #fff;
+  width: 100%;
+  height: 90px;
+  line-height: 80px;
+  padding-top: 10px;
+  position: absolute;
+  top: -90px;
+  left: 0;
+  z-index: 5;
+}
+header .content nav ul {
+  list-style-type: none;
+	font-size: 0;
+}
+header .content nav ul li {
+  display: inline-block;
+  margin-right: 25px;
+}
+header .content nav ul li a {
+  font-weight: 600;
+  font-size: 26px;
+	padding-left: 12px;
+  color: #666;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+header .content nav ul li a:hover {
+  color: #7e989c;
+}
+header .handle {
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+header .handle .bars {
+  width: 40px;
+  height: 26px;
+  position: absolute;
+  top: 27px;
+  left: 20px;
+}
+header .handle .bars .bar {
+  background-color: #666;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+}
+header .handle .bars .bar:nth-child(1) {
+  top: 0;
+}
+header .handle .bars .bar:nth-child(2) {
+  top: 12px;
+}
+header .handle .bars .bar:nth-child(3) {
+  bottom: 0;
+}
+header .handle:hover .bars .bar {
+  opacity: .7;
+}
+header.expanded .content {
+  top: -10px;
+}
+header.expanded .handle .bars .bar:nth-child(1) {
+  top: 12px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+header.expanded .handle .bars .bar:nth-child(2) {
+  opacity: 0;
+}
+header.expanded .handle .bars .bar:nth-child(3) {
+  bottom: 12px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* this stops the browser adding a date-time picker of its own in the form*/
+
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+/* button styling */
+
+.ghost-btn {
+  font-family: "Arial";
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #3f6fa0;
+  height: 36px;
+  line-height: 36px;
+  color: #3f6fa0;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 5px;
+  background-clip: padding-box;
+  font-size: 1em;
+  padding: .5em 1.5em;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: #ffffff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  zoom: 1;
+  -webkit-backface-visibility: hidden;
+  position: relative;
+}
+.ghost-btn:hover {
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+  background-color: #3f6fa0;
+  color: #ffffff;
+}
+.ghost-btn:focus {
+  outline: none;
+}

@@ -1,3 +1,46 @@
-<h1>Booking Confirmed!</h1>
+<div id="progress-bar">
+  <h2 class="off-screen">Booking progress indicator</h2>
+  <ol id="progress-steps">
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="count highlight-index"></span>
+    </li>
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="count highlight-index"></span>
+    </li>
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="count highlight-index"></span>
+    </li>
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="count highlight-index"></span>
+    </li>
+    <li class="progress-step" style="width: 16.67%;">
+      <span class="current-donation-step off-screen">current donation step:</span>
+      <span class="count"></span>
+    </li>
+  </ol>
+</div>
+<br></br>
+<img url("logo.png"); alt="hillside">
+
+<h1>Confirm Details and see you then!</h1>
+
+<p id="notice"><%= notice %></p>
+
+<body>
+
+  <strong>Name:</strong>
+  <%= @booking.each do
+  <%= @booking.name %>
+
+  <strong>Phone Number:</strong>
+  <%= @booking.phone_number %>
+
+  <strong>Number of Guests:</strong>
+  <%= @booking.number_of_visitors %>
+
+  <strong>Date:</strong>
+  <%= @booking.time %>
+</body>
+
 <h2>Please remember to put this in your diary. </h2>
 <h2>You may cancel at least 2 days prior by calling 04 000 or resubmitting this form.</h2>
