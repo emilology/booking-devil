@@ -999,12 +999,23 @@ TimePicker.defaults = (function( prefix ) {
 
 
 
-
-
 /**
  * Extend the picker to add the time picker.
  */
 Picker.extend( 'pickatime', TimePicker )
+/**
+ * Limit the time picker to evening time frame
+ */
 
+$('.timepicker').pickatime({
+  disable: [
+    true,
+    3, 5, 7,
+    [7,30],
+    [8,0],
+    [8,30],
+    [9,0]
+  ]
+})
 
 }));
