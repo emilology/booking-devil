@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   @@timeslots = [2.hours, 2.hours, 150.minutes, 150.minutes, 3.hours, 210.minutes, 210.minutes, 210.minutes, 250.minutes, 250.minutes]
-  @@booking_times = (17..21).to_a
+  @@booking_times = []
+  (17.hours..22.hours).step(30.minutes) {|t| @@booking_times << t}
 
   before_action :load_booking, only: [:show, :update, :edit, :destroy]
   before_action :load_wizard, only: [:new, :edit, :create, :update]
@@ -32,13 +33,17 @@ class BookingsController < ApplicationController
     # check availability for tables
     ## how much time do we need?
     needed_time = @@timeslots[guests-1]
-
     ## which possible start times do I have? -> @@booking_times
 
     ## which table has that amount of time available starting at those times?
     ## -->
+    ##for each table calculate if there's enough time to seat that number of people
+    ## from somewhere else, check to see if there are tables which could seat that number of guests, display all timeslots
+
     ### for each table
-    #### get bookings
+    #### get bookings for requested day and add them to bookings
+    tables.each { |t| t.bookings.merge.where(date:today)}
+
     #### check, for each start time, if its interval (start time -- start time + needed_time) overlaps any existing booking
     #### if it doesn't, save it for returning it
     available_times = []
@@ -48,7 +53,6 @@ class BookingsController < ApplicationController
     ## look into partial / SQL view for database to see if you can make new table saying "tables free this night for 2s / 4s / 6s if this process is too slow."
 
     render json: {times:available_times, date: booking_date, tables: tables, needed_time: needed_time}
-
 
     # in your datepicker, if you choose the jquery-ui one at least, you'll have a function that will run
     # before enabling a day. In that function you'll have to call this endpoint to figure out if you have availability for
@@ -77,7 +81,10 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    table = @booking.table
+    day = @booking.date
     @booking.destroy
+    BookedOut.where(table:table, day:day).first.destroy
     redirect_to bookings_url
   end
 

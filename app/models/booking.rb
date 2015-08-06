@@ -9,6 +9,14 @@ class Booking < ActiveRecord::Base
   validates :dietary_preferences, presence: true, if: :step3?
   validates :name, :phone_number, presence: true, if: :step4?
 
+  after_save :update_booked_out
+
+    def update_booked_out
+      self.tables.each do |t|
+        BookedOut.create(table:t, day:self.date) if t.booked_out? self.date
+      end
+    end
+
   include MultiStepModel
 
   def self.total_steps
