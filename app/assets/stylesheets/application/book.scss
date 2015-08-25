@@ -1,0 +1,95 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin rounded-corners($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+body {
+  background-color: #ccc;
+  padding: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.off-screen {
+  height: 1px;
+  left: -50000px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 1px;
+}
+
+// PROGRESS BAR
+#progress-bar {
+  position: inherit;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  margin-bottom: 1.5em;
+  color: #4d483f;
+  #progress-steps {
+    height: 8px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    @include rounded-corners(4px);
+    background-color: #fff;
+    position: relative;
+    list-style-type: none;
+    counter-reset: item;
+  }
+  .progress-step {
+    // Width set by JS
+    width: 16.66%;
+    height: 8px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  .count:before {
+    content: counter(item) " ";
+    counter-increment: item;
+    display: block;
+    width: 14px;
+    height: 18px;
+    background-color: #fff;
+    @include rounded-corners(50%);
+    position: absolute;
+    right: -10px;
+    top: -6px;
+    padding: 2px 0 0 6px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 999;
+  }
+  .highlight-index:before {
+    background-color: #86cac4;
+    color: #fff;
+  }
+  .highlight-index {
+    background-color: #86cac4;
+    display: block;
+    height: 100%;
+    @include rounded-corners(4px);
+  }
+  .description {
+    display: block;
+    text-align: center;
+    width: 64%;
+    right: -32%;
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.9em;
+  }
+  .bolded-step {
+    font-weight: normal !important;
+  }
+}
