@@ -23,5 +23,7 @@ module Bookings2
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.initialize_on_precompile = false
+    # This added for heroku to serve assets if it doesnt work take it oot again
+    config.serve_static_files = true
   end
 end
