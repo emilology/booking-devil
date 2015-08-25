@@ -28,7 +28,7 @@ gem 'rails_12factor', group: :production
 
 gem 'devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
-
+gem 'responsive_active_admin'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
