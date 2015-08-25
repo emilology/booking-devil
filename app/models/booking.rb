@@ -12,6 +12,6 @@ class Booking < ActiveRecord::Base
   include MultiStepModel
 
   def self.total_steps
-    5
+    6
   end
 end

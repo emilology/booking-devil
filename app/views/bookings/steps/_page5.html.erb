@@ -22,24 +22,19 @@
 <br></br>
 <img url("logo.png"); alt="hillside">
 
-<h1>Confirm Details and see you then!</h1>
+<h1>Confirm Your Details and see you then!</h1>
 
 <p id="notice"><%= notice %></p>
 
 <body>
 
   <strong>Name:</strong>
-  <%= @booking.each do
-  <%= @booking.name %>
 
-  <strong>Phone Number:</strong>
-  <%= @booking.phone_number %>
+  <%= @booking.each do |f| %>
+    <%= f.name %>
+<% end %>
 
-  <strong>Number of Guests:</strong>
-  <%= @booking.number_of_visitors %>
 
-  <strong>Date:</strong>
-  <%= @booking.time %>
 </body>
 
 <h2>Please remember to put this in your diary. </h2>
