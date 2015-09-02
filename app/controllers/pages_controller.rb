@@ -3,4 +3,4 @@ class PagesController < ApplicationController
   end
   # before_filter :authenticate, :except => [:_form, :new, :edit]
   # ...
-endw
+end
