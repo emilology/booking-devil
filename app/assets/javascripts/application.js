@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require turbolinks
 //= require pickadate/picker
 //= require pickadate/picker.date

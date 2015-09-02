@@ -12,12 +12,8 @@
 
  *= require_self
  *= require_tree .
-
  */
 
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
 
 @font-face {
 	font-family: "Raleway";
@@ -29,6 +25,11 @@ html {
 h1 {
 	font-weight: 200;
 	font-size: 30px;
+}
+
+#logo {
+	width: 45%;
+	max-width: 50mm;
 }
 
 body {
