@@ -20,10 +20,23 @@
   </ol>
 </div>
 <body>
-  <h1>How many people in your group?</h1><br></br>
 <div class="field">
-  <%= f.text_area :number_of_visitors %>
+  <div>
+      <div class="dec button">-</div>
+      <%= f.label :number_of_visitors %>
+      <%= f.number_field :number_of_visitors, id:"number-of-visitors", value:"2"%>
+      <div class="inc button">+</div>
+  </div>
+  <div>
+      <div class="dec button">-</div>
+      <%= f.label :Time %>
+      <%= f.time_field :time, id:"time", class: 'bkgdevil-timepicker', value:"20:00:00"%>
+      <div class="inc button">+</div>
+  </div>
+  <div>
+      <div class="dec button">-</div>
+      <%= f.label :Date %><br />
+      <%= f.date_field :date, class: 'bkgdevil-datepicker', value: "Next Friday"%>
+      <div class="inc button">+</div>
+  </div>
 </div>
-<a href="/admin/login">Admin login</a>
-<a href="/bookings/edit">Edit an existing booking</a>
-</body>

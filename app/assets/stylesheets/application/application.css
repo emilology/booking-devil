@@ -148,7 +148,6 @@ input {
   display: inline-block;
   text-decoration: none;
   border: 1px solid #4d483f;
-  height: 36px;
   line-height: 36px;
   color: #4d483f;
   -webkit-border-radius: 5px;
@@ -171,6 +170,12 @@ input {
   zoom: 1;
   -webkit-backface-visibility: hidden;
   position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 /* this makes the button work when mouse hovers*/
@@ -301,4 +306,14 @@ header.expanded .handle .bars .bar:nth-child(3) {
 
 input::-webkit-calendar-picker-indicator {
   display: none;
+}
+
+/*this is the styling for the new simplified form */
+
+.dec {
+  background-position: 0 -29px;
+}
+
+.buttons {
+  padding: 20px 0 0 140px;
 }

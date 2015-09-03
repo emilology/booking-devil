@@ -13,3 +13,14 @@
  *= require_self
  *= require application/application.css
  */
+
+ .button {
+   margin: 0 0 0 5px;
+   text-indent: -9999px;
+   cursor: pointer;
+   width: 29px;
+   height: 29px;
+   float: left;
+   text-align: center;
+   background: image-url("buttons.png") no-repeat;
+ }
