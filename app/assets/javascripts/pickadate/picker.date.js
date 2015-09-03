@@ -877,6 +877,7 @@ DatePicker.prototype.deactivate = function( type, datesToDisable ) {
 /**
  * Mark a collection of dates as “enabled”.
  */
+
 DatePicker.prototype.activate = function( type, datesToEnable ) {
 
     var calendar = this,
@@ -1338,17 +1339,22 @@ DatePicker.defaults = (function( prefix ) {
     }
 })( Picker.klasses().picker + '__' )
 
-
-
-
-
 /**
  * Extend the picker to add the date picker.
  */
+
 Picker.extend( 'pickadate', DatePicker )
 
+/**
+ * Limit the time picker to evening time frame
+ */
+
+$('.timepicker').pickatime({
+
+  // An integer (positive/negative) sets it as intervals relative from now.
+  min: 17,
+  // `true` sets it to now. `false` removes any limits.
+  max: 22
+})
 
 }));
-
-
-

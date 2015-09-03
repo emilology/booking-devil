@@ -23,20 +23,21 @@
 <div class="field">
   <div>
       <div class="dec button">-</div>
-      <%= f.label :number_of_visitors %>
       <%= f.number_field :number_of_visitors, id:"number-of-visitors", value:"2"%>
+      <%= f.label :people_dining %>
       <div class="inc button">+</div>
   </div>
   <div>
       <div class="dec button">-</div>
-      <%= f.label :Time %>
+      <%= f.label :at %>
       <%= f.time_field :time, id:"time", class: 'bkgdevil-timepicker', value:"20:00:00"%>
       <div class="inc button">+</div>
   </div>
   <div>
       <div class="dec button">-</div>
-      <%= f.label :Date %><br />
+      <%= f.label :Date %>
       <%= f.date_field :date, class: 'bkgdevil-datepicker', value: "Next Friday"%>
       <div class="inc button">+</div>
+      <br></br>
   </div>
 </div>

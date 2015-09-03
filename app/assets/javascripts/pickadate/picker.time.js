@@ -773,7 +773,6 @@ TimePicker.prototype.deactivate = function( type, timesToDisable ) {
     return disabledItems
 } //TimePicker.prototype.deactivate
 
-
 /**
  * Mark a collection of times as “enabled”.
  */
@@ -954,9 +953,6 @@ TimePicker.prototype.nodes = function( isOpen ) {
 
 
 
-
-
-
 /**
  * Extend the picker to add the component with the defaults.
  */
@@ -997,25 +993,18 @@ TimePicker.defaults = (function( prefix ) {
     }
 })( Picker.klasses().picker )
 
-
-
 /**
  * Extend the picker to add the time picker.
  */
 Picker.extend( 'pickatime', TimePicker )
+
 /**
  * Limit the time picker to evening time frame
  */
 
-$('.timepicker').pickatime({
-  disable: [
-    true,
-    3, 5, 7,
-    [7,30],
-    [8,0],
-    [8,30],
-    [9,0]
-  ]
-})
+  $('.timepicker').pickatime({
+    min: [7,30],
+    max: [14,0]
+  })
 
 }));

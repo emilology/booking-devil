@@ -5,6 +5,7 @@
  * Licensed under MIT
  */
 
+
 (function ( factory ) {
 
     // AMD.
@@ -1158,6 +1159,3 @@ return PickerConstructor
 
 
 }));
-
-
-

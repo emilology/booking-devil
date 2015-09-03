@@ -14,7 +14,6 @@
  *= require_tree .
  */
 
-
 @font-face {
 	font-family: "Raleway";
 }
@@ -26,12 +25,31 @@ html {
 h1 {
 	font-weight: 200;
 	font-size: 54px;
-
 }
 
 #logo {
 	width: 45%;
 	max-width: 50mm;
+}
+
+#number-of-visitors {
+	font-size: 40px;
+	height: 1.7ex;
+	width: 10%;
+	font-family: 'Raleway';
+}
+
+
+.bkgdevil-timepicker picker__input {
+	font-size: 40px;
+	height: 1.7ex;
+	width: 10%;
+	font-family: 'Raleway';
+}
+
+.field {
+	font-size: 24px;
+	font-family: 'Raleway';
 }
 
 body {
@@ -147,16 +165,16 @@ input {
   font-family: "Arial";
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #4d483f;
+  border: 5px solid #4d483f;
   line-height: 36px;
   color: #4d483f;
   -webkit-border-radius: 5px;
   -webkit-background-clip: padding-box;
   -moz-border-radius: 5px;
   -moz-background-clip: padding;
-  border-radius: 5px;
+  border-radius: 25px;
   background-clip: padding-box;
-  font-size: 1em;
+  font-size: 0.6em;
   padding: .5em 1.5em;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -166,10 +184,11 @@ input {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+	width: 20%;
+	align-items: center;
   cursor: pointer;
   zoom: 1;
   -webkit-backface-visibility: hidden;
-  position: relative;
 }
 
 input::-webkit-outer-spin-button,
