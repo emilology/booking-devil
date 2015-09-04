@@ -31,6 +31,16 @@
       <div class="dec button">-</div>
       <%= f.label :at %>
       <%= f.time_field :time, id:"time", class: 'bkgdevil-timepicker', value:"20:00:00"%>
+        <script>
+           $('.bkgdevil-timepicker').pickatime({
+             min: [17,0],
+             max: [22,0]
+           })
+        </script>
+
+
+
+
       <div class="inc button">+</div>
   </div>
   <div>

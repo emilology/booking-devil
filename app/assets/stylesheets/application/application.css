@@ -47,6 +47,7 @@ h1 {
 	font-family: 'Raleway';
 }
 
+
 .field {
 	font-size: 24px;
 	font-family: 'Raleway';
@@ -123,11 +124,18 @@ article {
 
 /*Create a horizontal list with spacing*/
 
+
 li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+/*commented this section out so that timepicker can work. can't remember what it's useful for so YOLO
+/*li {
 	display:inline-block;
 	float: left;
 	margin-right: 1px;
-}
+}*/
 
 .form {
 	background-color: #F6edee;

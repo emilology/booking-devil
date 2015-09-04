@@ -998,13 +998,4 @@ TimePicker.defaults = (function( prefix ) {
  */
 Picker.extend( 'pickatime', TimePicker )
 
-/**
- * Limit the time picker to evening time frame
- */
-
-  $('.timepicker').pickatime({
-    min: [7,30],
-    max: [14,0]
-  })
-
 }));
