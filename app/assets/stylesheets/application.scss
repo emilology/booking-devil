@@ -20,8 +20,8 @@
    cursor: pointer;
    width: 29px;
    height: 29px;
-   float: left;
    text-align: center;
    background: image-url("buttons.png") no-repeat;
    border-radius: 50%;
+   display: inline-block;
  }

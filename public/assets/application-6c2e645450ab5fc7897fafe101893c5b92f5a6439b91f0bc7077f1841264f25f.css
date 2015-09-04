@@ -432,7 +432,7 @@ body {
 #progress-bar .highlight-index {
   background-color: #86cac4;
   display: block;
-  height: 100%;
+  height: 50%;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   -o-border-radius: 4px;

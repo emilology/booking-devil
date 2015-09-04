@@ -4,7 +4,7 @@
     <li class="progress-step" style="width: 16.67%;">
       <span class="count highlight-index"></span>
     </li>
-    <li class="progress-step" style="width: 20%;">
+    <li class="progress-step" style="width: 16.67%;">
       <span class="count highlight-index"></span>
       <span class="current-donation-step off-screen">current donation step:</span>
     </li>
@@ -22,13 +22,12 @@
   <div>
     <div>
     <h1>Confirm your order</h1>
-      <%= f.text_area :name, value: "Name" %>
+      <%= f.text_area :name, placeholder: "Name" %>
     </div>
     <div>
-      <%= f.text_area :phone_number, value: "Phone number" %>
+      <%= f.text_area :phone_number, placeholder: "Phone number" %>
     </div>
     <div>
-    <%= f.text_area :dietary_preferences, value: "Dietary preferences remember at some point to code checkbox for no dietary prefs" %>
-    <input type="text" value="name" onfocus="this.value = this.value=='name'?'':this.value;" onblur="this.value = this.value==''?'name':this.value;">
+    <%= f.text_area :dietary_preferences, placeholder: "Dietary preferences" %>
     </div>
   </div>

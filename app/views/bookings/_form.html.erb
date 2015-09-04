@@ -10,6 +10,5 @@
       <%= f.submit "<", name: "<" unless @booking.first_step? %>
       <%= f.submit @booking.last_step? ? nil: ">" %>
     </div>
-    <br></br>
   <% end %>
 <% end %>

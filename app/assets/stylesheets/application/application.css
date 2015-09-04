@@ -34,11 +34,24 @@ h1 {
 
 #number-of-visitors {
 	font-size: 40px;
-	height: 1.7ex;
-	width: 10%;
+	height: 3ex;
 	font-family: 'Raleway';
+	padding: 0px 0ex 0ex 0ex;
+	padding-left: 1em;
+
 }
 
+@media only screen and (max-width: 768px) {
+  #number-of-visitors {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+	#number-of-visitors {
+    width: 50%;
+  }
+}
 
 .bkgdevil-timepicker picker__input {
 	font-size: 40px;
@@ -343,4 +356,5 @@ input::-webkit-calendar-picker-indicator {
 
 .buttons {
   padding: 20px 0 0 140px;
+	display: inline;
 }
