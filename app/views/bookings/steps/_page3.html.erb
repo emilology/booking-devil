@@ -20,34 +20,5 @@
   </ol>
 </div>
 
-<p>Confirm Your Details and see you then!</p>
-
-<p id="notice"><%= notice %></p>
-<body>
-  <strong>Booking for </strong>
-
-  <%= @booking.each do |f| %>
-    <%= f.number_of_visitors %>
-<% end %>
-On this day at this time for
-  <strong>Name:</strong>
-
-  <%= @booking.each do |f| %>
-    <%= f.name %>
-<% end %>
-
-</body>
-
-<h1>See you then!</h1>
-
-<p id="notice"><%= notice %></p>
-
-<body>
-
-  <strong>Name:</strong>
-
-  <%= @booking.each do |f| %>
-    <%= f.name %>
-<% end %>
-
-</body>
+<%="#{@booking.name}, confirm your booking for #{@booking.number_of_visitors} people at #{@booking.time}
+on #{@booking.date}." %>
