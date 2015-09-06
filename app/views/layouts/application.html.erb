@@ -19,11 +19,10 @@
       </div>
     </div>
   </div>
-</header>
   <title>Hillside Kitchen & Cellar Wellington: Restaurant Booking Web App</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway:500,900,200' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <meta name="Hillside Kitchen & Cellar" content="Fine Dining in Thorndon Wellington, New Zealand">
   <meta name="keywords" content="restaurant,dinner,lunch,fine dining,bistronomy">
   <%= csrf_meta_tags %>
@@ -60,6 +59,7 @@ if(!Modernizr.input.placeholder){
 }});
 
 </script>
+</header>
 <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

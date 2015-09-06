@@ -28,8 +28,8 @@ h1 {
 }
 
 #logo {
-	width: 45%;
-	max-width: 50mm;
+	width: 25%;
+	max-width: 5em;
 }
 
 #number-of-visitors {
@@ -76,16 +76,36 @@ body {
 }
 
 textarea {
-  background: #F6edee;
-	resize: none;
-	padding-top: 0.5ex;
 	width: 80%;
 	height: 4ex;
   border: 1px inset #888 #ffffff;
 	font-size: 45px;
 	text-align: center;
-	font-family: inherit;
 	font-weight: normal;
+	font-family: "Arial";
+  display: inline-block;
+  text-decoration: none;
+  border: 5px solid #4d483f;
+  line-height: 36px;
+  color: #4d483f;
+  -webkit-border-radius: 5px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 5px;
+  -moz-background-clip: padding;
+  border-radius: 25px;
+  background-clip: padding-box;
+  font-size: 0.6em;
+  padding: .5em 1.5em;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: #ffffff;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+	width: 20%;
+	align-items: center;
 
 }
 

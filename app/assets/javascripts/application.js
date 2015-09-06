@@ -9,9 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 //= require jquery
-//= require turbolinks
 //= require pickadate/picker
 //= require pickadate/picker.date
 //= require pickadate/picker.time
@@ -25,27 +23,32 @@
     });
 }.call(this));
 
+var buttonpusher = function() {
 
-$(function() {
+  var $button = $(this);
+  var oldValue = $button.parent().find("input").val();
 
-  $(".button").on("click", function() {
+  if ($button.text() == "+") {
+    var newVal = parseFloat(oldValue) + 1;
+  } else {
+   // Don't allow decrementing below zero
+    if (oldValue > 0) {
+      var newVal = parseFloat(oldValue) - 1;
+    } else {
+      newVal = 0;
+    }
+  }
+  console.log(
+    "HI GUYS!"
+  );
+  $button.parent().find("input").val(newVal);
 
-    var $button = $(this);
-    var oldValue = $button.parent().find("input").val();
+};
 
-    if ($button.text() == "+") {
-  	  var newVal = parseFloat(oldValue) + 1;
-  	} else {
-	   // Don't allow decrementing below zero
-      if (oldValue > 0) {
-        var newVal = parseFloat(oldValue) - 1;
-	    } else {
-        newVal = 0;
-      }
-	  }
-
-    $button.parent().find("input").val(newVal);
-
-  });
-
-});
+// $(function() {
+var done = false || done;
+if(!done){
+  $(document).on("click", ".button", buttonpusher);
+  done = true;
+}
+// });
