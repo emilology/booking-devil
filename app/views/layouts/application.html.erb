@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html class="opaque1">
-<header role="banner" meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <div class="content">
-    <nav class="container">
-      <ul>
-        <li><a href="http://www.hillsidekitchen.co.nz">hillside</a></li>
-        <li><a href="/admin/login">admin login</a></li>
-        <li><a href="/bookings/edit">edit a booking</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div class="container">
-    <div id="header-handle" class="handle">
-      <div class="bars">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-    </div>
-  </div>
+<head>
   <title>Hillside Kitchen & Cellar Wellington: Restaurant Booking Web App</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway:500,900,200' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
@@ -29,38 +11,58 @@
   <%= image_tag("logo.png", id: "logo", alt: "Hillside Logo") %>
   <%= yield %>
   <%= javascript_include_tag 'application', :modernizr %>
-<script>
-$(document).ready(function(){
+  <script>
+  $(document).ready(function(){
 
-if(!Modernizr.input.placeholder){
+  if(!Modernizr.input.placeholder){
 
-	$('[placeholder]').focus(function() {
-	  var input = $(this);
-	  if (input.val() == input.attr('placeholder')) {
-		input.val('');
-		input.removeClass('placeholder');
-	  }
-	}).blur(function() {
-	  var input = $(this);
-	  if (input.val() == '' || input.val() == input.attr('placeholder')) {
-		input.addClass('placeholder');
-		input.val(input.attr('placeholder'));
-	  }
-	}).blur();
-	$('[placeholder]').parents('form').submit(function() {
-	  $(this).find('[placeholder]').each(function() {
-		var input = $(this);
-		if (input.val() == input.attr('placeholder')) {
-		  input.val('');
-		}
-	  })
-	});
+  $('[placeholder]').focus(function() {
+    var input = $(this);
+    if (input.val() == input.attr('placeholder')) {
+    input.val('');
+    input.removeClass('placeholder');
+    }
+  }).blur(function() {
+    var input = $(this);
+    if (input.val() == '' || input.val() == input.attr('placeholder')) {
+    input.addClass('placeholder');
+    input.val(input.attr('placeholder'));
+    }
+  }).blur();
+  $('[placeholder]').parents('form').submit(function() {
+    $(this).find('[placeholder]').each(function() {
+    var input = $(this);
+    if (input.val() == input.attr('placeholder')) {
+      input.val('');
+    }
+    })
+  });
 
-}});
+  }});
 
-</script>
-</header>
+  </script>
+</head>
 <body>
+  <header role="banner" meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <div class="content">
+      <nav class="container">
+        <ul>
+          <li><a href="http://www.hillsidekitchen.co.nz">hillside</a></li>
+          <li><a href="/admin/login">admin login</a></li>
+          <li><a href="/bookings/edit">edit a booking</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div id="header-handle" class="handle">
+        <div class="bars">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+  </header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 </body>
