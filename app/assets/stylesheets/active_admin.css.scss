@@ -10,8 +10,13 @@
 // Active Admin's got SASS!
 @import "active_admin/mixins";
 @import "active_admin/base";
-@import "responsive_active_admin"
 // Overriding any non-variable SASS must be done after the fact.
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
+
+@media all and (max-width: 730px) {
+  #sidebar {
+    display: none;
+  }
+}

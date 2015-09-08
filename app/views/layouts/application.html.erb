@@ -4,6 +4,7 @@
   <title>Hillside Kitchen & Cellar Wellington: Restaurant Booking Web App</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway:500,900,200' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
+  <%= stylesheet_link_tag    'stacktable', media: 'all', 'data-turbolinks-track' => false %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <meta name="Hillside Kitchen & Cellar" content="Fine Dining in Thorndon Wellington, New Zealand">
   <meta name="keywords" content="restaurant,dinner,lunch,fine dining,bistronomy">
@@ -11,7 +12,9 @@
   <%= image_tag("logo.png", id: "logo", alt: "Hillside Logo") %>
   <%= yield %>
   <%= javascript_include_tag 'application', :modernizr %>
+
   <script>
+
   $(document).ready(function(){
 
   if(!Modernizr.input.placeholder){

@@ -9,6 +9,7 @@ ActiveAdmin.register Admin do
     column :sign_in_count
     column :created_at
     actions
+
   end
 
   filter :email
